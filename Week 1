@@ -1,1 +1,36 @@
-khushi
+/* LoadNLSW88 data */
+sysuse nlsw88.dta
+
+/* Describe data */
+describe
+
+/* summary of selected variables */
+su wage
+
+/* summary of selected variables with details */
+su wage, d
+
+/* race wise summary of wage */
+bys race: su wage
+bys union: su wage 
+
+/* oneway/twoway tabulation using "tabulate"
+tabulate race
+tab union 
+
+/* only frequency */
+tab race union
+
+/* row wise percent */
+tab race union, row
+
+/* percent across column */
+tab race union, col
+
+/* over all percent of each cell */
+tab race union, cell
+
+/* Sort, gsort and list */
+sort race /* sort data in ascending order of race */
+list race wage
+gsort - race /* sort data in the descending order of race */
