@@ -1,1 +1,13 @@
+/* Load Data, describe, tab categorical variables */
+sysuse auto
+describe
+tab foreign
 
+/* Regression and added-variable plots */
+regress price mpg
+reg price mpg rep78
+avplots
+
+/* regression and predicted and residual plots */
+regress price mpg
+predict price_hat
