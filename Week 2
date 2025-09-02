@@ -9,5 +9,32 @@ reg price mpg rep78
 avplots
 
 /* regression and predicted and residual plots */
-regress price mpg
-predict price_hat
+reg price mpg
+
+/* Predicted values of the dependent variable */
+predict price_hat 
+
+/* res for residual */
+predict u_hat, res
+br price price_hat u_hat
+twoway (scatter price mpg)
+
+*/ line of the fitted value */
+twoway(scatter price mpg)(line price_hat mpg)
+
+/* alternative using "lfit" */
+twoway(scatter price mpg) (lfit price mpg)
+
+/* category wise regression analysis */
+bys foreign: reg price mpg
+predict price_foreign_hat if e(sample)
+predict price_domestic_hat if !e(sample)
+
+/* egen command and rowmax command is used */
+egen price_combine_hat= rowmax(price_foreign_hat price_domestic_hat)
+
+twoway(scatter price mpg, by(foreign))
+twoway(scatter price mpg) (line price_combine_hat mpg) , by(foreign)
+
+*/ alternative /*
+twoway(scatter price mpg, by(foreign)) (lfit price mpg, by(foreign))
