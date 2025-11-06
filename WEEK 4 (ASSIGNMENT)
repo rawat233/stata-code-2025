@@ -1,0 +1,11 @@
+rename (hv024  hv025  hv045c  hv122_03  hv219  hv220  hv226  hv270  sh47 hv115_01   hv271a)  (state sector language education gender age cooking level religion status income)
+tab sector
+tab sector gender
+tab cooking sector 
+tab cooking sector, row
+tab sector cooking, row
+ tab sector cooking, column
+tab sector cooking,cell
+encode sector, gen(sector1)
+encode level,gen(level1)
+ table sector1 level1,stat(mean income)
