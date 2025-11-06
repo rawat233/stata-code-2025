@@ -1,0 +1,10 @@
+sysuse nlsw88.dta
+tab race
+gen race1=0  if race==2 
+replace  race1=0  if race==3
+replace  race1=1  if race==1
+label variable race1 "white or color"
+label define  today 0 "color" 1 "white"
+label values race1 today
+tab race1
+tab race1,nolabel
