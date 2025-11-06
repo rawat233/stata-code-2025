@@ -1,0 +1,12 @@
+describe
+tab gender
+tab Gender HeartAttackRisk
+tab HeartAttackRisk
+tab Gender HeartAttackRisk, column
+tab Diet
+ su Cholestrol
+encode Diet,gen(diet1)
+table diet1,stat(mean Cholesterol) stat(max Cholesterol) stat(sd Cholesterol)
+tab Continent HeartAttackRisk
+tab Continent HeartAttackRisk,column
+tab Continent HeartAttackRisk,column row
