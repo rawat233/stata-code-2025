@@ -1,0 +1,6 @@
+ corr general_index food_index
+ corr general_inflation  food_inflation
+twoway (scatter general_index  food_index)
+twoway (scatter general_inflation and food_inflation)
+reg general_index  food_index
+reg general_inflation  food_inflation
