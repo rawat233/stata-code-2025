@@ -1,0 +1,27 @@
+x<-5          #generate object x
+x
+print(x)      #print x
+6->y          # we can also write this, instead of y<-6. Both the ways are right.
+print(y)
+
+z<-1:100     #gen z from 1 to 100
+
+m<-seq(5,800,100)  #1st-start, 2nd-upper limit, 3rd interval
+seq(5,800,100)
+
+ls()            #list all the objets
+rm(x)           # remove object
+rm(list=ls())     
+
+x<-c(1,2,5,7)     #combine command
+y<-c("a","b","c","d","e") #combine command(string object)
+
+m<-matrix(c(1,2,3,4),ncol=2)    #matrix value of object
+m<-matrix(c(1,2,3,4),nrow=2) 
+h<-matrix(c(5,10,9,6,3,4,2,0,11),ncol=3
+i<-matrix(c(20,30,40,12,9,6),nrow=3,ncol=2)
+
+kh<-t(i)                      #transpose of matrix x
+f<-function(x){x^2}            #fumction command
+a<--1:10
+b<-f(a)
