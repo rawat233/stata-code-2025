@@ -1,0 +1,34 @@
+#TASK 1
+x<-c(1,4,5,6)        #objectives of x   
+y<-c(4,6,7,8)        #objectives of y
+data1<-data.frame(x,y)    #creating data1 for x and y
+data1<-data.frame(gdp=x, inflation=y)    #change name for x and y
+plot(data1$gdp, data1$inflation)          #plotting x and y
+
+rm(list=ls))                   #removing objectives,so that we can create new objectives
+ls()                           #list the characters
+
+#TASK 2
+x<-c(1,4,5,6,8,2,3,9,7,10)       #objectives of x 
+y<-c(2,8,5,3,7,1,4,6,10,9)       #objectives of y
+
+data1<-data.frame(x,y)           #creating data1 for x and y
+plot(data1$x,data1$y)            #plotting x and y
+
+#TASK 3
+f<-function(q)  (q^5)            #function of q
+a<-c(-5,4,12,17,19)              #domain (andar ki values)
+b<-f(a)                          # range(result,here it is q^5)
+plot(a,b)                        #plotting graph
+
+rm(list=ls())
+ls()
+getwd()                          #get the default directory
+setwd("C:\\Users\\DEll\\Desktop\\R")  #set new directory by changing the slash into double slash or only front slash,or only put double quotes in the link
+data2<-read.csv("DAY 2.csv")          #display of the excel file by putting its name
+setwd("C:\\Users\\DEll\\Desktop\\R")  # now becoz new variable is added in the excel, so that is updated here(Height)
+
+data22<-read.csv("DAY 2.csv")
+age<-data22$AGE                    #representing only one variable(AGE)
+grade<-data22$GRADE                #representing only one variable(GRADE)
+plot(age,grade)                    #plotting age and grade
