@@ -1,0 +1,11 @@
+install.packages("ggplot2")         #download package
+library(ggplot2)                    #call a package
+x<-1:26
+y<-log(x)
+today<-data.frame(x,y)              #creating a data frame
+plot(x,y)
+p1<-ggplot(data=today)              # creating ggplot canvas,it will be blank
+p1<-p1+(mapping=aes(x=x,y=y))       #doing aeesthetic mapping,basically giving the x axis and y axis and + is used here as p1 which was already created like a blank canvas
+p1<-p1+geom_point())
+setwd("C:\\Users\\DEll\\Desktop\\R")
+data1<-read.csv(("gdp_growth,inflation(day3) filtered.csv")
